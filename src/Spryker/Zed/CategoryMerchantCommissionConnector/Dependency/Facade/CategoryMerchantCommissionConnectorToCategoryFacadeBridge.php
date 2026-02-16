@@ -27,7 +27,7 @@ class CategoryMerchantCommissionConnectorToCategoryFacadeBridge implements Categ
     /**
      * @param \Generated\Shared\Transfer\CategoryNodeCriteriaTransfer $categoryNodeCriteriaTransfer
      *
-     * @return array<int, list<string>>
+     * @return array<int, array<string>>
      */
     public function getAscendantCategoryKeysGroupedByIdCategoryNode(CategoryNodeCriteriaTransfer $categoryNodeCriteriaTransfer): array
     {

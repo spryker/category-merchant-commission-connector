@@ -48,7 +48,7 @@ class ProductReader implements ProductReaderInterface
     }
 
     /**
-     * @param list<string> $productConcreteSkus
+     * @param array<string> $productConcreteSkus
      *
      * @return void
      */
@@ -65,9 +65,9 @@ class ProductReader implements ProductReaderInterface
     }
 
     /**
-     * @param list<string> $productConcreteSkus
+     * @param array<string> $productConcreteSkus
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function filterOutCachedProductConcreteSkus(array $productConcreteSkus): array
     {

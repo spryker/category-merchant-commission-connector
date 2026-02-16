@@ -18,7 +18,7 @@ class CategoryReader implements CategoryReaderInterface
     protected CategoryMerchantCommissionConnectorToCategoryFacadeInterface $categoryFacade;
 
     /**
-     * @var array<int, list<string>>
+     * @var array<int, array<string>>
      */
     protected static array $categoryKeysGroupedByIdCategoryNode = [];
 
@@ -33,7 +33,7 @@ class CategoryReader implements CategoryReaderInterface
     /**
      * @param array<string, list<\Generated\Shared\Transfer\ProductCategoryTransfer>> $productCategoryTransfersGroupedBySku
      *
-     * @return array<int, list<string>>
+     * @return array<int, array<string>>
      */
     public function getCategoryKeysGroupedByIdCategoryNode(array $productCategoryTransfersGroupedBySku): array
     {
@@ -47,7 +47,7 @@ class CategoryReader implements CategoryReaderInterface
     }
 
     /**
-     * @param list<int> $categoryNodeIds
+     * @param array<int> $categoryNodeIds
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class CategoryReader implements CategoryReaderInterface
     /**
      * @param array<string, list<\Generated\Shared\Transfer\ProductCategoryTransfer>> $productCategoryTransfersGroupedBySku
      *
-     * @return list<int>
+     * @return array<int>
      */
     protected function extractCategoryNodeIds(array $productCategoryTransfersGroupedBySku): array
     {
@@ -79,9 +79,9 @@ class CategoryReader implements CategoryReaderInterface
     }
 
     /**
-     * @param list<int> $categoryNodeIds
+     * @param array<int> $categoryNodeIds
      *
-     * @return list<int>
+     * @return array<int>
      */
     protected function filterOutCachedCategoryNodeIds(array $categoryNodeIds): array
     {

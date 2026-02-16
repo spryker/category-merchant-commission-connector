@@ -97,7 +97,7 @@ class CategoryCollectorRule implements CategoryCollectorRuleInterface
 
     /**
      * @param \Generated\Shared\Transfer\RuleEngineClauseTransfer $ruleEngineClauseTransfer
-     * @param list<string> $categoryKeys
+     * @param array<string> $categoryKeys
      *
      * @return bool
      */
@@ -114,9 +114,9 @@ class CategoryCollectorRule implements CategoryCollectorRuleInterface
 
     /**
      * @param list<\Generated\Shared\Transfer\ProductCategoryTransfer> $productCategoryTransfers
-     * @param array<int, list<string>> $categoryKeysGroupedByIdCategoryNode
+     * @param array<int, array<string>> $categoryKeysGroupedByIdCategoryNode
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function getCategoryKeysForProductCategories(array $productCategoryTransfers, array $categoryKeysGroupedByIdCategoryNode): array
     {

@@ -80,9 +80,9 @@ class ProductCategoryReader implements ProductCategoryReaderInterface
     }
 
     /**
-     * @param list<string> $productConcreteSkus
+     * @param array<string> $productConcreteSkus
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function filterOutCachedProductConcreteSkus(array $productConcreteSkus): array
     {
