@@ -31,17 +31,11 @@ class CategoryMerchantCommissionConnectorBusinessTester extends Actor
 {
     use _generated\CategoryMerchantCommissionConnectorBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureProductCategoryTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getProductCategoryQuery());
     }
 
-    /**
-     * @return \Orm\Zed\ProductCategory\Persistence\SpyProductCategoryQuery
-     */
     protected function getProductCategoryQuery(): SpyProductCategoryQuery
     {
         return SpyProductCategoryQuery::create();

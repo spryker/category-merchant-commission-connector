@@ -39,11 +39,6 @@ class CategoryMerchantCommissionConnectorDependencyProvider extends AbstractBund
      */
     public const FACADE_RULE_ENGINE = 'FACADE_RULE_ENGINE';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -55,11 +50,6 @@ class CategoryMerchantCommissionConnectorDependencyProvider extends AbstractBund
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCategoryFacade(Container $container): Container
     {
         $container->set(static::FACADE_CATEGORY, function (Container $container) {
@@ -71,11 +61,6 @@ class CategoryMerchantCommissionConnectorDependencyProvider extends AbstractBund
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductCategoryFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_CATEGORY, function (Container $container) {
@@ -87,11 +72,6 @@ class CategoryMerchantCommissionConnectorDependencyProvider extends AbstractBund
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT, function (Container $container) {
@@ -103,11 +83,6 @@ class CategoryMerchantCommissionConnectorDependencyProvider extends AbstractBund
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addRuleEngineFacade(Container $container): Container
     {
         $container->set(static::FACADE_RULE_ENGINE, function (Container $container) {

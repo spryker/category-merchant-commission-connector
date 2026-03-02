@@ -25,11 +25,6 @@ class CategoryMerchantCommissionConnectorToProductCategoryFacadeBridge implement
         $this->productCategoryFacade = $productCategoryFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductCategoryCriteriaTransfer $productCategoryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductCategoryCollectionTransfer
-     */
     public function getProductCategoryCollection(
         ProductCategoryCriteriaTransfer $productCategoryCriteriaTransfer
     ): ProductCategoryCollectionTransfer {

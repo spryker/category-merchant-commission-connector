@@ -60,9 +60,6 @@ class CollectByCategoryTest extends Unit
      */
     protected CategoryMerchantCommissionConnectorBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -76,9 +73,6 @@ class CollectByCategoryTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnAllItemsSatisfyingProvidedClause(): void
     {
         // Arrange
@@ -131,9 +125,6 @@ class CollectByCategoryTest extends Unit
         $this->assertTrue($this->isItemCollected($collectedItems, $productConcrete2Transfer->getSkuOrFail()));
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnEmptyCollectionWhenNoItemSatisfiedProvidedClause(): void
     {
         // Arrange

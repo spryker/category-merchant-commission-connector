@@ -37,12 +37,6 @@ class CategoryCollectorRule implements CategoryCollectorRuleInterface
      */
     protected CategoryMerchantCommissionConnectorToRuleEngineFacadeInterface $ruleEngineFacade;
 
-    /**
-     * @param \Spryker\Zed\CategoryMerchantCommissionConnector\Business\Reader\ProductReaderInterface $productReader
-     * @param \Spryker\Zed\CategoryMerchantCommissionConnector\Business\Reader\ProductCategoryReaderInterface $productCategoryReader
-     * @param \Spryker\Zed\CategoryMerchantCommissionConnector\Business\Reader\CategoryReaderInterface $categoryReader
-     * @param \Spryker\Zed\CategoryMerchantCommissionConnector\Dependency\Facade\CategoryMerchantCommissionConnectorToRuleEngineFacadeInterface $ruleEngineFacade
-     */
     public function __construct(
         ProductReaderInterface $productReader,
         ProductCategoryReaderInterface $productCategoryReader,

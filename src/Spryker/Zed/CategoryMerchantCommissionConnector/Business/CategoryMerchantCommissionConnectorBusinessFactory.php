@@ -27,9 +27,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class CategoryMerchantCommissionConnectorBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\CategoryMerchantCommissionConnector\Business\CollectorRule\CategoryCollectorRuleInterface
-     */
     public function createCategoryCollectorRule(): CategoryCollectorRuleInterface
     {
         return new CategoryCollectorRule(
@@ -40,57 +37,36 @@ class CategoryMerchantCommissionConnectorBusinessFactory extends AbstractBusines
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryMerchantCommissionConnector\Business\Reader\ProductReaderInterface
-     */
     public function createProductReader(): ProductReaderInterface
     {
         return new ProductReader($this->getProductFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryMerchantCommissionConnector\Business\Reader\ProductCategoryReaderInterface
-     */
     public function createProductCategoryReader(): ProductCategoryReaderInterface
     {
         return new ProductCategoryReader($this->getProductCategoryFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryMerchantCommissionConnector\Business\Reader\CategoryReaderInterface
-     */
     public function createCategoryReader(): CategoryReaderInterface
     {
         return new CategoryReader($this->getCategoryFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryMerchantCommissionConnector\Dependency\Facade\CategoryMerchantCommissionConnectorToCategoryFacadeInterface
-     */
     public function getCategoryFacade(): CategoryMerchantCommissionConnectorToCategoryFacadeInterface
     {
         return $this->getProvidedDependency(CategoryMerchantCommissionConnectorDependencyProvider::FACADE_CATEGORY);
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryMerchantCommissionConnector\Dependency\Facade\CategoryMerchantCommissionConnectorToProductCategoryFacadeInterface
-     */
     public function getProductCategoryFacade(): CategoryMerchantCommissionConnectorToProductCategoryFacadeInterface
     {
         return $this->getProvidedDependency(CategoryMerchantCommissionConnectorDependencyProvider::FACADE_PRODUCT_CATEGORY);
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryMerchantCommissionConnector\Dependency\Facade\CategoryMerchantCommissionConnectorToProductFacadeInterface
-     */
     public function getProductFacade(): CategoryMerchantCommissionConnectorToProductFacadeInterface
     {
         return $this->getProvidedDependency(CategoryMerchantCommissionConnectorDependencyProvider::FACADE_PRODUCT);
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryMerchantCommissionConnector\Dependency\Facade\CategoryMerchantCommissionConnectorToRuleEngineFacadeInterface
-     */
     public function getRuleEngineFacade(): CategoryMerchantCommissionConnectorToRuleEngineFacadeInterface
     {
         return $this->getProvidedDependency(CategoryMerchantCommissionConnectorDependencyProvider::FACADE_RULE_ENGINE);

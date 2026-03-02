@@ -23,9 +23,6 @@ class ProductReader implements ProductReaderInterface
      */
     protected static array $productConcreteTransfersIndexedBySku = [];
 
-    /**
-     * @param \Spryker\Zed\CategoryMerchantCommissionConnector\Dependency\Facade\CategoryMerchantCommissionConnectorToProductFacadeInterface $productFacade
-     */
     public function __construct(CategoryMerchantCommissionConnectorToProductFacadeInterface $productFacade)
     {
         $this->productFacade = $productFacade;

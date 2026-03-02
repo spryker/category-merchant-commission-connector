@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ProductConcreteCriteriaTransfer;
 
 interface CategoryMerchantCommissionConnectorToProductFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteCollectionTransfer
-     */
     public function getProductConcreteCollection(
         ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
     ): ProductConcreteCollectionTransfer;

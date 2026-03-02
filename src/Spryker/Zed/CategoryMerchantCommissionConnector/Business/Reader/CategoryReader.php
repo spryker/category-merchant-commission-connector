@@ -22,9 +22,6 @@ class CategoryReader implements CategoryReaderInterface
      */
     protected static array $categoryKeysGroupedByIdCategoryNode = [];
 
-    /**
-     * @param \Spryker\Zed\CategoryMerchantCommissionConnector\Dependency\Facade\CategoryMerchantCommissionConnectorToCategoryFacadeInterface $categoryFacade
-     */
     public function __construct(CategoryMerchantCommissionConnectorToCategoryFacadeInterface $categoryFacade)
     {
         $this->categoryFacade = $categoryFacade;
